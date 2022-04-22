@@ -1,0 +1,127 @@
+* {
+  font-family: var(--font-family);
+}
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  font-size: 18px;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: rgba(4, 12, 24, 1) 25%;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+.modal-content {
+  color: white;
+}
+.form {
+  display: grid;
+}
+.submit {
+  background-color: #ff4820;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#from_name,
+#email,
+#message {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.error {
+  color: #bf1650 !important;
+  font-size: 15px !important;
+}
+
+.error::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+@media screen and (max-width: 1050px) {
+  .modal-content {
+    text-align: left;
+  }
+  .error {
+    margin: 0 !important;
+  }
+  .modal-content {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .modal-content {
+    min-height: 450px;
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+}
+@media screen and (min-device-width: 820px) and (max-device-width: 1180px) {
+  .modal-content {
+    min-width: 700px;
+    padding-top: 75px;
+    padding-bottom: 80px;
+    min-height: 480px;
+  }
+  .sizeLabel{
+      font-size: 30px;
+      font-weight: bold;
+  }
+  .close-modal{
+    font-size: 20px;
+    font-weight: bold !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+  .submit{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h2{
+      font-size: 30px;
+  }
+}
